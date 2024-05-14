@@ -1,0 +1,33 @@
+apiVersion: v2
+appVersion: 1.30.1
+dependencies:
+- condition: redis.enabled
+  name: redis
+  repository: https://charts.bitnami.com/bitnami
+  version: 16.13.1
+- condition: minio.enabled
+  name: minio
+  repository: ""
+  version: 8.0.9
+- condition: openldap.enabled
+  name: openldap
+  repository: ""
+  version: 1.2.3
+description: Open source Spinnaker with v1.30.1 Gitops Support
+home: http://spinnaker.io/
+icon: https://pbs.twimg.com/profile_images/669205226994319362/O7OjwPrh_400x400.png
+maintainers:
+- email: srinivas@opsmx.io
+  name: ksrinimba
+- email: mahesh.kota@opsmx.io
+  name: maheshopsmx
+- email: saiteja.katabhatina@opsmx.io
+  name: saitejaopsmx
+- email: abhinay.byrisetty@hotmail.com
+  name: abhinaybyrisetty
+name: spinnaker
+sources:
+- https://github.com/spinnaker
+- https://github.com/OpsMx/spinnaker-helm
+- https://github.com/viglesiasce/images
+version: 2.2.17

@@ -1,0 +1,6 @@
+1. You will need to create port forwarding tunnel in order to access the Spinnaker UI:
+
+   kubectl --namespace {{ .Release.Namespace }} port-forward svc/spin-deck 9000
+
+2. Visit the Spinnaker UI by opening your browser to: http://127.0.0.1:9000
+
