@@ -1,0 +1,32 @@
+spinnaker:
+    ingress:
+        enabled: true
+        # className: 
+        host: datamgmtdemo01.eastasia.cloudapp.azure.com
+        annotations:
+            nginx.ingress.kubernetes.io/enable-cors: "true"
+            nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+            nginx.ingress.kubernetes.io/rewrite-target: /$2
+        # tls:
+        #  - secretName: -tls
+        #    hosts:
+        #      - domain.com
+        
+    ingressGate:
+        enabled: false
+        # host: gate.spinnaker.example.org
+        annotations:
+            nginx.ingress.kubernetes.io/enable-cors: "true"
+            nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+        # tls:
+        #  - secretName: -tls
+        #    hosts:
+        #      - domain.com
+        
+        # spinnakerFeatureFlags is a list of Spinnaker feature flags to enable
+        # Ref: https://www.spinnaker.io/reference/halyard/commands/#hal-config-features-edit
+        # spinnakerFeatureFlags:
+        #   - artifacts
+        #   - pipeline-templates
+
+    
