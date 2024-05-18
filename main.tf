@@ -1,6 +1,6 @@
 resource "helm_release" "spinnaker" {
   name       = "spinnaker"
   chart      = "/chart"
-  namespace  = "spinnaker-ns"
+  namespace  = "spin-ns"
   create_namespace = true
 }
